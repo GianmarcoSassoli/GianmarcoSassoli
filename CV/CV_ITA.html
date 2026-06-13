@@ -41,13 +41,13 @@
     /* ===== COLONNA SINISTRA ===== */
     .sidebar {
       width: 230px;
-      min-width: 230px;
+      min-width: 220px;
       background-color: #3c5068;
       color: #e8edf2;
       padding: 18px 20px 30px 20px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
     }
 
     /* FOTO */
@@ -85,16 +85,16 @@
       font-weight: 700;
       letter-spacing: 0.5px;
       color: #ffffff;
-      margin-bottom: 10px;
-      padding-bottom: 4px;
+      margin-bottom: 6px;
+      padding-bottom: 2px;
     }
 
     /* Contatti */
     .contact-item {
       font-size: 11px;
       color: #c8d4e0;
-      margin-bottom: 5px;
-      line-height: 1.5;
+      margin-bottom: 3px;
+      line-height: 1.2;
       word-break: break-word;
     }
     .contact-item a {
@@ -312,6 +312,13 @@
       <h3>Educazione</h3>
 
       <div class="edu-entry">
+        <span class="school">Università di Bologna</span>
+        <span class="degree">Laurea Triennale in<br/>Ingegneria Informatica</span>
+        <span class="years">2023 – presente</span>
+        <span class="gpa">Media: 29/30</span>
+      </div>
+
+      <div class="edu-entry">
         <span class="school">UC Santa Cruz</span>
         <span class="degree">Exchange Program · Computer Engineering</span>
         <span class="years">Set 2025 – Mar 2026</span>
@@ -319,24 +326,15 @@
       </div>
 
       <div class="edu-entry">
-        <span class="school">Università di Bologna</span>
-        <span class="degree">Laurea Triennale in<br/>Ingegneria Informatica</span>
-        <span class="years">2023 – presente</span>
-        <span class="gpa">Media: 29/30</span>
-      </div>
-
-      <!-- <div class="edu-entry">
         <span class="school">Liceo Galvani, Bologna</span>
-        <span class="degree">Liceo Scientifico Internazionale<br/>Italo-Inglese</span>
-        <span class="years">2018 – 2023</span>
+        <span class="degree">Liceo Scientifico Internazionale<br/>Italo-Inglese Diploma 2023</span>
       </div>
 
       <div class="edu-entry">
-        <span class="school">Melstone Public School</span>
-        <span class="degree">Exchange Year</span>
-        <span class="years">2021 – 2022</span>
+        <span class="school">Melstone Public School, Montana</span>
+        <span class="degree">Exchange Year Diploma 2022</span>
       </div>
-    </div> -->
+    </div>
 
     <!-- COMPETENZE -->
     <div class="sidebar-section">
@@ -376,6 +374,7 @@
           <li>Italiano (Madrelingua)</li>
           <li>Inglese (C1)</li>
           <li>Francese (B2)</li>
+          <li>Spagnolo (B1)</li>
         </ul>
       </div>
 
@@ -390,7 +389,7 @@
       <h1>Gianmarco Sassoli</h1>
       <p class="job-title">Studente di Ingegneria Informatica</p>
       <p class="summary">
-        Studente al terzo anno di Ingegneria Informatica presso l'Università di Bologna. Mosso da una curiosità trasversale per il mondo della tecnologia, amo comprendere a fondo il funzionamento dei sistemi per dare vita a diverse tipologie di progetti. Affronto le sfide con determinazione e orientamento al risultato, impegnandomi costantemente per portare ogni iniziativa dall'ideazione fino alla sua completa realizzazione. Flessibile e orientato alla collaborazione in team, mi inserisco nei gruppi di lavoro con proattività ed entusiasmo, offrendo il mio contributo sia sul piano creativo e di analisi, sia su quello puramente esecutivo.
+        Studente al terzo anno di Ingegneria Informatica presso l'Università di Bologna. Animato da una curiosità trasversale per il mondo della tecnologia, amo comprendere a fondo il funzionamento dei sistemi per dare vita a diverse tipologie di progetti. Affronto le sfide con determinazione e orientamento al risultato, impegnandomi costantemente per portare ogni iniziativa dall'ideazione fino alla sua completa realizzazione. Flessibile e orientato al lavoro in team, mi inserisco nei gruppi di lavoro con proattività ed entusiasmo, offrendo il mio contributo sia sul piano creativo e di analisi, sia su quello puramente esecutivo.
       </p>
     </div>
 
@@ -400,13 +399,13 @@
 
       <div class="job">
         <div class="job-header">
-          <p class="role-company">Software Engineer (Stage) · Nutanix</p>
+          <p class="role-company">Software Engineer (Internship) · Nutanix</p>
           <p class="period">Gen 2026 – Mar 2026 · San Jose, CA &nbsp;|&nbsp; Apr 2026 – Giu 2026 · Remote</p>
         </div>
         <ul>
-          <li>Lavorato in team per progettare e implementare una pipeline di ingestion in Python che analizza bundle di output di sistema, categorizza i dati e li carica in un database PostgreSQL.</li>
-          <li>Sviluppato un sistema di normalizzazione a tre stadi per file di configurazione BIOS provenienti da cinque vendor in formati eterogenei, combinando pre-filtraggio semantico, retrieval RAG con FAISS e un LLM locale per mappare automaticamente i campi su ~45 parametri canonici.</li>
-          <li>Costruita una dashboard analitica con backend Flask e frontend Plotly Dash per il confronto affiancato di run, visualizzazione latenza core-to-core e revisione interattiva delle proposte LLM.</li>
+          <li>Lavoro in team di progettazione e implementazione di una pipeline di ingestion in Python che analizza bundle di output di sistema, categorizza i dati e li carica in un database PostgreSQL.</li>
+          <li>Sviluppo di un sistema di normalizzazione a tre stadi per file di configurazione BIOS provenienti da cinque vendor in formati eterogenei, combinando pre-filtraggio semantico, retrieval RAG con FAISS e un LLM locale per mappare automaticamente i campi su ~45 parametri canonici.</li>
+          <li>Costruzione di una dashboard analitica con backend Flask e frontend Plotly Dash per il confronto affiancato di run, visualizzazione latenza core-to-core e revisione interattiva delle proposte LLM.</li>
         </ul>
       </div>
     </section>
@@ -432,7 +431,7 @@
         <p class="project-meta">Progetto di gruppo · Applicazione iOS</p>
         <span class="tech-tag">React Native</span><span class="tech-tag">Expo</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Supabase</span>
         <p>
-          Applicazione mobile iOS sviluppata in team per gli studenti della UC Santa Cruz.
+          Applicazione mobile iOS sviluppata in team per gli studenti di UC Santa Cruz.
           Offre una bacheca centralizzata per la condivisione di cibo in eccesso all'interno dell'università, consentendo agli studenti di cedere o ricevere pasti e ridurre concretamente lo spreco alimentare nel campus.
         </p>
       </div>
