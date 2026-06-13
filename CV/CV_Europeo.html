@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curriculum Vitae – Gianmarco Sassoli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    /* =============================================
+       ISTRUZIONI PER MODIFICARE:
+       - Cambia i testi direttamente nell'HTML
+       - Per la FOTO: cerca "photo-placeholder" e
+         sostituisci il div con:
+         <img src="foto.jpg" alt="Foto profilo" />
+         (metti la foto nella stessa cartella)
+       - Per STAMPARE in PDF: apri nel browser,
+         Ctrl+P → "Salva come PDF" → margini a Nessuno
+       ============================================= */
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color: #2c2c2c;
+      background: #e8e8e8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: 780px;
+      background: white;
+      display: flex;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.18);
+    }
+
+    /* ===== COLONNA SINISTRA ===== */
+    .sidebar {
+      width: 230px;
+      min-width: 230px;
+      background-color: #3c5068;
+      color: #e8edf2;
+      padding: 28px 20px 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* FOTO */
+    .photo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+    .photo-wrapper img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.25);
+    }
+    .photo-placeholder {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: 2px dashed rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Titoli sezione sidebar */
+    .sidebar-section h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+    }
+
+    /* Contatti */
+    .contact-item {
+      font-size: 11px;
+      color: #c8d4e0;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+    .contact-item a {
+      color: #c8d4e0;
+      text-decoration: none;
+    }
+    .contact-item a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Educazione */
+    .edu-entry {
+      margin-bottom: 12px;
+    }
+    .edu-entry .school {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #ffffff;
+      display: block;
+    }
+    .edu-entry .degree {
+      font-size: 11px;
+      color: #c0cdd9;
+      line-height: 1.4;
+      display: block;
+    }
+    .edu-entry .years {
+      font-size: 10.5px;
+      color: #a8bac8;
+      display: block;
+    }
+    .edu-entry .gpa {
+      font-size: 10.5px;
+      color: #8fb8d4;
+      display: block;
+      font-weight: 600;
+    }
+
+    /* Skills */
+    .skills-group {
+      margin-bottom: 11px;
+    }
+    .skills-group .skills-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .skills-group ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills-group ul li {
+      font-size: 11px;
+      color: #c0cdd9;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+    .skills-group ul li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: #7a9aba;
+    }
+
+    /* ===== COLONNA DESTRA ===== */
+    .main {
+      flex: 1;
+      padding: 30px 28px 30px 28px;
+    }
+
+    /* Header nome */
+    .main-header {
+      margin-bottom: 14px;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 14px;
+    }
+    .main-header h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: #1a1a2e;
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+    }
+    .main-header .job-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #7a8a9a;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+    .main-header .summary {
+      font-size: 11.5px;
+      color: #444;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    /* Titoli sezione destra */
+    .section {
+      margin-bottom: 16px;
+    }
+    .section h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #3c5068;
+      margin-bottom: 10px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #d8e2ec;
+    }
+
+    /* Esperienze lavorative */
+    .job {
+      margin-bottom: 12px;
+    }
+    .job-header .role-company {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .job-header .period {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 5px;
+    }
+    .job ul {
+      list-style: none;
+      padding: 0;
+    }
+    .job ul li {
+      font-size: 11.5px;
+      color: #444;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 3px;
+      line-height: 1.55;
+    }
+    .job ul li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: #3c5068;
+    }
+
+    /* Progetti */
+    .project {
+      margin-bottom: 12px;
+    }
+    .project .project-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 2px;
+    }
+    .project .project-meta {
+      font-size: 10.5px;
+      color: #7a9aba;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+    .project .tech-tag {
+      display: inline-block;
+      background: #eef3f8;
+      color: #3c5068;
+      font-size: 9.5px;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin: 2px 2px 4px 0;
+    }
+    .project p {
+      font-size: 11.5px;
+      color: #444;
+      line-height: 1.55;
+      margin-bottom: 3px;
+    }
+
+    /* Stampa */
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- =================== COLONNA SINISTRA =================== -->
+  <aside class="sidebar">
+
+    <!-- FOTO: sostituisci il div sotto con <img src="foto.jpg" alt="Foto profilo" /> -->
+    <div class="photo-wrapper">
+      <div class="photo-placeholder">La tua<br/>foto qui</div>
+    </div>
+
+    <!-- CONTATTI -->
+    <div class="sidebar-section">
+      <h3>Contatti</h3>
+      <p class="contact-item">Strada Maggiore 54, Bologna</p>
+      <p class="contact-item">+39 348 019 8743</p>
+      <p class="contact-item"><a href="mailto:gians2004@gmail.com">gians2004@gmail.com</a></p>
+      <p class="contact-item"><a href="https://github.com/GianmarcoSassoli" target="_blank">github.com/GianmarcoSassoli</a></p>
+      <p class="contact-item"><a href="https://www.linkedin.com/in/gianmarco-sassoli" target="_blank">linkedin/gianmarco-sassoli</a></p>
+    </div>
+
+    <!-- EDUCAZIONE -->
+    <div class="sidebar-section">
+      <h3>Educazione</h3>
+
+      <div class="edu-entry">
+        <span class="school">UC Santa Cruz</span>
+        <span class="degree">Exchange Program · Computer Engineering</span>
+        <span class="years">Set 2025 – Mar 2026</span>
+        <span class="gpa">Borsa di studio completa<br/>(Programma Overseas, UniBo)</span>
+      </div>
+
+      <div class="edu-entry">
+        <span class="school">Università di Bologna</span>
+        <span class="degree">Laurea Triennale in<br/>Ingegneria Informatica</span>
+        <span class="years">2023 – presente</span>
+        <span class="gpa">Media: 29/30</span>
+      </div>
+
+      <!-- <div class="edu-entry">
+        <span class="school">Liceo Galvani, Bologna</span>
+        <span class="degree">Liceo Scientifico Internazionale<br/>Italo-Inglese</span>
+        <span class="years">2018 – 2023</span>
+      </div>
+
+      <div class="edu-entry">
+        <span class="school">Melstone Public School</span>
+        <span class="degree">Exchange Year</span>
+        <span class="years">2021 – 2022</span>
+      </div>
+    </div> -->
+
+    <!-- COMPETENZE -->
+    <div class="sidebar-section">
+      <h3>Competenze</h3>
+
+      <div class="skills-group">
+        <span class="skills-title">Linguaggi</span>
+        <ul>
+          <li>Python, Java, C</li>
+          <li>TypeScript, JavaScript</li>
+          <li>SQL, HTML/CSS, Shell</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <span class="skills-title">Framework & Librerie</span>
+        <ul>
+          <li>React, Next.js</li>
+          <li>React Native, Expo</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <span class="skills-title">Strumenti & Servizi</span>
+        <ul>
+          <li>Git &amp; GitHub</li>
+          <li>Supabase</li>
+          <li>Vercel</li>
+          <li>Google Gemini API</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <span class="skills-title">Lingue</span>
+        <ul>
+          <li>Italiano (Madrelingua)</li>
+          <li>Inglese (C1)</li>
+          <li>Francese (B2)</li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- =================== COLONNA DESTRA =================== -->
+  <main class="main">
+
+    <!-- NOME E TITOLO -->
+    <div class="main-header">
+      <h1>Gianmarco Sassoli</h1>
+      <p class="job-title">Studente di Ingegneria Informatica</p>
+      <p class="summary">
+        Studente al terzo anno di Ingegneria Informatica presso l'Università di Bologna. Mosso da una curiosità trasversale per il mondo della tecnologia, amo comprendere a fondo il funzionamento dei sistemi per dare vita a diverse tipologie di progetti. Affronto le sfide con determinazione e orientamento al risultato, impegnandomi costantemente per portare ogni iniziativa dall'ideazione fino alla sua completa realizzazione. Flessibile e orientato alla collaborazione in team, mi inserisco nei gruppi di lavoro con proattività ed entusiasmo, offrendo il mio contributo sia sul piano creativo e di analisi, sia su quello puramente esecutivo.
+      </p>
+    </div>
+
+    <!-- ESPERIENZA LAVORATIVA -->
+    <section class="section">
+      <h2>Esperienza Lavorativa</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <p class="role-company">Software Engineer (Stage) · Nutanix</p>
+          <p class="period">Gen 2026 – Mar 2026 · San Jose, CA &nbsp;|&nbsp; Apr 2026 – Giu 2026 · Remote</p>
+        </div>
+        <ul>
+          <li>Lavorato in team per progettare e implementare una pipeline di ingestion in Python che analizza bundle di output di sistema, categorizza i dati e li carica in un database PostgreSQL.</li>
+          <li>Sviluppato un sistema di normalizzazione a tre stadi per file di configurazione BIOS provenienti da cinque vendor in formati eterogenei, combinando pre-filtraggio semantico, retrieval RAG con FAISS e un LLM locale per mappare automaticamente i campi su ~45 parametri canonici.</li>
+          <li>Costruita una dashboard analitica con backend Flask e frontend Plotly Dash per il confronto affiancato di run, visualizzazione latenza core-to-core e revisione interattiva delle proposte LLM.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROGETTI -->
+    <section class="section">
+      <h2>Progetti</h2>
+
+      <div class="project">
+        <p class="project-name">Studia — Piattaforma di apprendimento con AI</p>
+        <p class="project-meta">Progetto di gruppo · Piattaforma web ottimizzata per Mobile · CruzHacks 2026, UC Santa Cruz &nbsp;</p>
+        <span class="tech-tag">Next.js</span><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Supabase</span><span class="tech-tag">Google Gemini AI</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Vercel</span>
+        <p>
+          Piattaforma web sviluppata in team durante l'hackathon CruzHacks 2026 (UC Santa Cruz).
+          Permette agli studenti di caricare PDF e generare automaticamente flashcard e quiz tramite
+          Google Gemini AI. Include sistema di streak e leaderboard per incentivare la continuità
+          nello studio. Autenticazione via Google OAuth con Supabase.
+        </p>
+      </div>
+
+      <div class="project">
+        <p class="project-name">Sano — App Mobile per la Riduzione dello Spreco Alimentare</p>
+        <p class="project-meta">Progetto di gruppo · Applicazione iOS</p>
+        <span class="tech-tag">React Native</span><span class="tech-tag">Expo</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Supabase</span>
+        <p>
+          Applicazione mobile iOS sviluppata in team per gli studenti della UC Santa Cruz.
+          Offre una bacheca centralizzata per la condivisione di cibo in eccesso all'interno dell'università, consentendo agli studenti di cedere o ricevere pasti e ridurre concretamente lo spreco alimentare nel campus.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
