@@ -16,4 +16,5 @@ gianmarco_sassoli:
 ```
 
 ## Check Out My CV!
-* [🇮🇹 Curriculum Vitae (Italiano)](https://gianmarcosassoli.github.io/GianmarcoSassoli/CV/CV_ITA.html)
+* [Curriculum Vitae (Italiano)](https://gianmarcosassoli.github.io/GianmarcoSassoli/CV/CV_ITA.html)
+* [Curriculum Vitae (English)](https://gianmarcosassoli.github.io/GianmarcoSassoli/CV/CV_ENG.html)

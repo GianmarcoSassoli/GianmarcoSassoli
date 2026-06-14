@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=840"/>
+  <title>Curriculum Vitae – Gianmarco Sassoli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color: #2c2c2c;
+      background: #e8e8e8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: 780px;
+      background: white;
+      display: flex;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.18);
+    }
+
+    .sidebar {
+      width: 230px;
+      min-width: 220px;
+      background-color: #3c5068;
+      color: #e8edf2;
+      padding: 18px 20px 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .photo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0px;
+    }
+    .photo-wrapper img {
+      width: 120px;
+      height: 120px;
+      border-radius: 55%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.25);
+    }
+    .photo-placeholder {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: 2px dashed rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .sidebar-section h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin-bottom: 6px;
+      padding-bottom: 2px;
+    }
+
+    .contact-item {
+      font-size: 11px;
+      color: #c8d4e0;
+      margin-bottom: 3px;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+    .contact-item a {
+      color: #c8d4e0;
+      text-decoration: none;
+    }
+    .contact-item a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .edu-entry {
+      margin-bottom: 12px;
+    }
+    .edu-entry .school {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #ffffff;
+      display: block;
+    }
+    .edu-entry .degree {
+      font-size: 11px;
+      color: #c0cdd9;
+      line-height: 1.4;
+      display: block;
+    }
+    .edu-entry .years {
+      font-size: 10.5px;
+      color: #a8bac8;
+      display: block;
+    }
+    .edu-entry .gpa {
+      font-size: 10.5px;
+      color: #8fb8d4;
+      display: block;
+      font-weight: 600;
+    }
+
+    .skills-group {
+      margin-bottom: 11px;
+    }
+    .skills-group .skills-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .skills-group ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills-group ul li {
+      font-size: 11px;
+      color: #c0cdd9;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+    .skills-group ul li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: #7a9aba;
+    }
+
+    .main {
+      flex: 1;
+      padding: 30px 28px 30px 28px;
+    }
+
+    .main-header {
+      margin-bottom: 14px;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 14px;
+    }
+    .main-header h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: #1a1a2e;
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+    }
+    .main-header .job-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #7a8a9a;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+    .main-header .summary {
+      font-size: 11.5px;
+      color: #444;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    .section {
+      margin-bottom: 16px;
+    }
+    .section h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #3c5068;
+      margin-bottom: 10px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #d8e2ec;
+    }
+
+    .job {
+      margin-bottom: 12px;
+    }
+    .job-header .role-company {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .job-header .period {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 5px;
+    }
+    .job ul {
+      list-style: none;
+      padding: 0;
+    }
+    .job ul li {
+      font-size: 11.5px;
+      color: #444;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 3px;
+      line-height: 1.55;
+    }
+    .job ul li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: #3c5068;
+    }
+
+    .project {
+      margin-bottom: 12px;
+    }
+    .project .project-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 2px;
+    }
+    .project .project-meta {
+      font-size: 10.5px;
+      color: #7a9aba;
+      font-style: italic;
+      margin-bottom: 0px;
+    }
+    .project .tech-tag {
+      display: inline-block;
+      background: #eef3f8;
+      color: #3c5068;
+      font-size: 9.5px;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin: 2px 2px 4px 0;
+    }
+    .project p {
+      font-size: 11.5px;
+      color: #444;
+      line-height: 1.55;
+      margin-bottom: 3px;
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+
+    <div class="photo-wrapper">
+      <img src="Foto_CV.jpg" alt="Profile photo" />
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="sidebar-section">
+      <h3>Contacts</h3>
+      <p class="contact-item">Strada Maggiore 54, Bologna</p>
+      <p class="contact-item">+39 348 019 8743</p>
+      <p class="contact-item"><a href="mailto:gians2004@gmail.com">gians2004@gmail.com</a></p>
+      <p class="contact-item"><a href="https://github.com/GianmarcoSassoli" target="_blank">github.com/GianmarcoSassoli</a></p>
+      <p class="contact-item"><a href="https://www.linkedin.com/in/gianmarco-sassoli" target="_blank">linkedin/gianmarco-sassoli</a></p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="sidebar-section">
+      <h3>Education</h3>
+
+      <div class="edu-entry">
+        <span class="school">University of Bologna</span>
+        <span class="degree">Bachelor's Degree in<br/>Computer Engineering</span>
+        <span class="years">2023 – present</span>
+        <span class="gpa">GPA: 29/30</span>
+      </div>
+
+      <div class="edu-entry">
+        <span class="school">UC Santa Cruz</span>
+        <span class="degree">Exchange Program · Computer Engineering</span>
+        <span class="years">Sep 2025 – Mar 2026</span>
+        <span class="gpa">Full scholarship<br/>(Overseas Program, UniBo)</span>
+      </div>
+
+      <div class="edu-entry">
+        <span class="school">Liceo Galvani, Bologna</span>
+        <span class="degree">Italian-English International<br/>Scientific High School Diploma 2023</span>
+      </div>
+
+      <div class="edu-entry">
+        <span class="school">Melstone Public School, Montana</span>
+        <span class="degree">Exchange Year Diploma 2022</span>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="sidebar-section">
+      <h3>Skills</h3>
+
+      <div class="skills-group">
+        <span class="skills-title">Languages</span>
+        <ul>
+          <li>Python, Java, C</li>
+          <li>TypeScript, JavaScript</li>
+          <li>SQL, HTML/CSS, Shell</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <span class="skills-title">Frameworks &amp; Libraries</span>
+        <ul>
+          <li>React, Next.js</li>
+          <li>React Native, Expo</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <span class="skills-title">Tools &amp; Services</span>
+        <ul>
+          <li>Git &amp; GitHub</li>
+          <li>Supabase</li>
+          <li>Vercel</li>
+          <li>Google Gemini API</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <span class="skills-title">Languages</span>
+        <ul>
+          <li>Italian (Native)</li>
+          <li>English (C1)</li>
+          <li>French (B2)</li>
+          <li>Spanish (B1)</li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- NAME AND TITLE -->
+    <div class="main-header">
+      <h1>Gianmarco Sassoli</h1>
+      <p class="job-title">Computer Engineering Student</p>
+      <p class="summary">
+        Third-year Computer Engineering student at the University of Bologna. Driven by a broad curiosity for technology, I enjoy understanding how systems work in order to bring a wide variety of projects to life. I approach challenges with determination and a results-oriented mindset, consistently committing to taking every initiative from concept to full completion. Flexible and team-oriented, I integrate into work groups with proactivity and enthusiasm, contributing both on the creative and analytical side as well as on the purely executive one.
+      </p>
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section">
+      <h2>Work Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <p class="role-company">Software Engineer (Internship) · Nutanix</p>
+          <p class="period">Jan 2026 – Mar 2026 · San Jose, CA &nbsp;|&nbsp; Apr 2026 – Jun 2026 · Remote</p>
+        </div>
+        <ul>
+          <li>Team design and implementation of a Python ingestion pipeline that analyzes system output bundles, categorizes the data, and loads it into a PostgreSQL database.</li>
+          <li>Development of a three-stage normalization system for BIOS configuration files from five vendors in heterogeneous formats, combining semantic pre-filtering, RAG retrieval with FAISS, and a local LLM to automatically map fields onto ~45 canonical parameters.</li>
+          <li>Built an analytics dashboard with a Flask backend and Plotly Dash frontend for side-by-side run comparison, core-to-core latency visualization, and interactive review of LLM proposals.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <p class="project-name">Studia — AI-powered Learning Platform</p>
+        <p class="project-meta">Group project · Mobile-optimized web platform · CruzHacks 2026, UC Santa Cruz &nbsp;</p>
+        <span class="tech-tag">Next.js</span><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Supabase</span><span class="tech-tag">Google Gemini AI</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Vercel</span>
+        <p>
+          Web platform developed as a team during the CruzHacks 2026 hackathon (UC Santa Cruz).
+          Allows students to upload PDFs and automatically generate flashcards and quizzes via
+          Google Gemini AI. Includes a streak system and leaderboard to encourage consistent
+          study habits. Google OAuth authentication via Supabase.
+        </p>
+      </div>
+
+      <div class="project">
+        <p class="project-name">Sano — Mobile App for Food Waste Reduction</p>
+        <p class="project-meta">Group project · iOS Application</p>
+        <span class="tech-tag">React Native</span><span class="tech-tag">Expo</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Supabase</span>
+        <p>
+          iOS mobile application developed as a team for UC Santa Cruz students.
+          Provides a centralized board for sharing surplus food within the university, allowing
+          students to give away or receive meals and concretely reduce food waste on campus.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
